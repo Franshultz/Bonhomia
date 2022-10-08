@@ -111,10 +111,11 @@ body{
 nav{
     background-image: url(../images/header/fondo-nav.gif);
     position: sticky;
-    top: -20px;
-    z-index: 100;
+    top: -40px;
     grid-area: nav;
-}
+    z-index: 100;
+    height: 180px;
+}   
 
 .nav-contenedor{
     grid-area: nav2;
@@ -163,7 +164,7 @@ nav ul ul{
     color: white;
     display: none;
     position: relative;
-    background-color: #000000;
+    background-color: transparent;
 }
 
 nav ul ul li{
@@ -174,7 +175,7 @@ nav ul ul li{
 
 nav ul li:hover ul{
     display: block;
-    transform: translate(-30px, 40px);
+    transform: translate(-75px, 40px);
     position: absolute;
 }
 
@@ -211,6 +212,7 @@ header a h2{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    margin-bottom: 0px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
