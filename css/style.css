@@ -208,7 +208,7 @@ header a h2{
     font-weight: 600;
     font-size: 50px;
     font-family: 'Comfortaa', cursive;
-    background-image: url(../images/header/header.jpg);
+    background-image: url(../images/header/header2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -230,7 +230,7 @@ header h2:hover{
 }
 
 .header-fondo2{
-    background-image: url(../images/header/header2.jpg);
+    background-image: url(../images/header/header.jpg);
 }
 
 .header-fondo3{
@@ -478,45 +478,41 @@ header h2:hover{
     display: block;
 }
 
-.articulos{
+.articulos-bs{
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-.articulos div{
-    background-image: url(../images/header/e680c193340a4939786ae1609bcc2551.jpg);
-    font-family: 'Raleway', sans-serif;
-    font-weight: 500;
-    margin: 0px 100px 50px;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    text-align: center;
     justify-content: center;
     align-items: center;
-    overflow: auto;
+    width: auto;
 }
 
-.articulos div img{
-    height: 270px;
-    width: 250px;
+.articulos-div{
+    height: 510px;
+    width: 100%;
+    max-width: 350px;
+    min-width: 350px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    margin: 0px 50px 50px;
+}
+
+.articulos-div img{
+    height: 300px;
+    width: 100%;
+    max-width: 350px;
+    min-width: 350px;
     border-style: outset;
-    border-radius: 20px;
+    border-radius: 10px;
     border-color: #d9b100;
 }
 
-.articulos div:hover{
+.articulos-div:hover{
     transform: scale(1.1);
     transition-duration: 1s;
     box-shadow: 5px 5px 10px black;
 }
 
 .articulos div p, .articulos div h5{
-    padding: 3px;
-    color: rgb(244, 222, 123) ;
+    color: rgb(244, 222, 123);
 }
 
 .articulos div p{
@@ -528,8 +524,9 @@ header h2:hover{
 }
 
 .articulos div button{
+    font-size: 15px;
     height: 30px;
-    width: 80px;
+    width: 85px;
     margin: 5px;
     border: 2px solid #d9b100;
     border-radius: 5px;
