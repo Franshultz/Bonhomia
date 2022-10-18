@@ -664,16 +664,6 @@ header h2:hover{
     padding: 20px 100px;
 }
 
-.main-talles_remeras{
-    padding: 50px;
-    color:#ffd700;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-}
-
-
 /* FOOTER* (todos)*/
 
 footer {

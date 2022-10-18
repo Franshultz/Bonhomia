@@ -1,0 +1,125 @@
+
+
+@media (max-width: 768px) {
+
+    nav {
+        height: 200px ;
+
+        ul{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
+        .contenedor_micuenta{
+
+            img{
+                width: 30px;
+                height: 30px;
+            }
+        }
+    
+        .contenedor_carrito{
+    
+            img{
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        .menu{ 
+            display:none;
+            position: absolute;
+            background-image: url(../images/header/fondo-nav.gif);
+            height: auto;
+            flex-direction: column;
+            right: 0;
+            left: 0;
+            text-align: center;
+            padding: 16px 0;
+            animation-name: entrada-superior;
+            animation-duration: 1.3s;
+            animation-timing-function: ease-in-out;
+
+            li{
+                margin-top: 12px;
+                }
+
+            li:checked{    
+                display: inline-block;
+                background-color: $color-primario;
+                }
+            }
+        
+        input[type=checkbox]:checked ~ .menu{
+            display: block;
+            position: absolute;
+            }
+        
+        @keyframes entrada-superior{
+            0%{
+                transform: translateY(-600px);
+            }
+            
+            100%{
+                transform: translateY(0px);
+            }
+            }
+        
+        .hamburger{
+            position: relative;
+            display: block;
+            font-size: 30px;
+            z-index: 100;
+            }
+        }
+
+    .novedades{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        div img{
+            margin-bottom: 35px;
+        }
+    }
+
+    .destacados{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        div img{
+            margin-bottom: 35px;
+        }
+    }
+
+    .articulos{
+
+        div{
+            margin: 0px 0px 50px
+        }
+    }
+
+    .main-personalizadas{
+
+        h3{
+            font-size: 25px;
+        }
+    }
+
+    .masinfo_articulos{
+        padding: 50px 0px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-content{
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        align-content: center;
+    }
+} 

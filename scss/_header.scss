@@ -1,0 +1,59 @@
+/* HEADER (todos) */
+
+
+.header-contenedor{
+    grid-area: header2;
+}
+
+.header-talles{
+    grid-area: header3;
+}
+
+.header-personalizadas{
+    background-size: 100%;
+    grid-area: header4;
+}
+
+header{
+
+    a{
+        text-decoration: none;
+
+        h2{
+            height: 350px;
+            padding: 100px 0px;
+            color: $color-primario;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 50px;
+            font-family: 'Comfortaa', cursive;
+            background-image: url(../images/header/header2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            margin-bottom: 0px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            grid-area: header;
+        }
+
+        h2:hover{
+            transform: scale(1.1);
+            transition: 1s;
+            transition-delay: 0.5s;
+            transition-timing-function: ease-in-out;
+        }
+    }
+}
+
+.header-fondo2{
+    background-image: url(../images/header/header.jpg);
+}
+
+.header-fondo3{
+    background-image: url(../images/header/header3.jpg);
+}

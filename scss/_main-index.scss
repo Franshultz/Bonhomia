@@ -1,0 +1,110 @@
+/* MAIN (index) */
+
+.main-index{
+    padding: 100px 0px;
+    /* background-color: rgb(244, 236, 196); */
+    background-image: url(../images/header/fondo-main.jpg);
+    background-repeat: no repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    grid-area: main1;
+
+    .novedades-h3{
+        padding-bottom: 100px;
+        font-size: 50px;
+        font-family: 'Cinzel', serif;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .novedades{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        div img{
+            height: 300px;
+            width: 250px;
+            border-radius: 20px;
+            border-color: #d9b100;
+            border-style: outset;
+            box-shadow: 5px 5px 10px black;
+        }
+
+        div img:hover{
+            transform: scale(1.1);
+            transition-duration: 1s;
+            box-shadow: 5px 5px 10px black;
+        }
+    }
+
+    .destacados-h3{
+        padding:100px 0px;
+        font-size: 50px;
+        font-family: 'Cinzel', serif;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .destacados{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        div img{
+            height: 300px;
+            width: 250px;
+            border-radius: 20px;
+            border-style: outset;
+            border-color: #d9b100;
+            box-shadow: 5px 5px 10px black;
+        }
+
+        div img:hover{
+            transform: scale(1.1);
+            transition-duration: 1s;
+            box-shadow: 5px 5px 10px black;
+        }
+    }
+
+    .masinfo{
+        font-size: 25px;
+        font-weight: 100;
+        font-style: normal;
+        font-family: 'Comfortaa', cursive;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+
+        .masinfo_articulos{
+            padding: 150px 0px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            img{
+                width: 70px;
+                height: 70px;
+                margin: 70px;
+            }
+
+            .medios-de-pago img{
+                width: 40px;
+                height: 25px;
+                margin: 0px;
+            }
+
+            p{
+                font-size: 15px;
+                text-align: center;
+            }
+        }
+    }
+}

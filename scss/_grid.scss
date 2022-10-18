@@ -1,0 +1,33 @@
+/* GRID SECTION */
+.body_index {
+    max-width: 100%;
+    display: grid;
+    grid-template-areas: "nav"
+   "header"
+   "main1"
+   "aside1"
+   "footer"; }
+  
+  body {
+    max-width: 100%;
+    display: grid;
+    grid-template-areas: "nav2"
+   "header2"
+   "main"
+   "footer2"; }
+  
+  .body_talles {
+    max-width: 100%;
+    display: grid;
+    grid-template-areas: "nav3"
+   "header3"
+   "main2"
+   "footer3"; }
+  
+  .body_personalizadas {
+    max-width: 100%;
+    display: grid;
+    grid-template-areas: "nav4"
+   "header4"
+   "main3"
+   "footer4"; }
