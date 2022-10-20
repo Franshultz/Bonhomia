@@ -24,7 +24,7 @@ header{
             padding: 100px 0px;
             color: $color-primario;
             font-style: normal;
-            font-weight: 600;
+            font-weight: $weight*6;
             font-size: 50px;
             font-family: 'Comfortaa', cursive;
             background-image: url(../images/header/header2.jpg);
@@ -32,11 +32,7 @@ header{
             background-size: cover;
             background-position: center center;
             margin-bottom: 0px;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
+            @include flex(flex, row, wrap, center, center);
             text-align: center;
             grid-area: header;
         }

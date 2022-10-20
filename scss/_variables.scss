@@ -1,1 +1,17 @@
 $color-primario: #ffd700;
+$color-secundario: #000000;
+$color-terciario: #f4de7b;
+$color-productos: #0e061c;
+$weight: 100;
+@mixin flex ($display, $direction, $wrap, $justify , $align){
+    display: $display;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin width-height ($width, $height) {
+    width: $width;
+    height: $height;
+}

@@ -1,3 +1,5 @@
+/* MAIN (buzos,remeras,medias,accesorios,y promociones.html) */
+
 .main-productos{
     height: 100%;
     background-image: url(../images/header/fondo-main.jpg);
@@ -12,50 +14,8 @@
         position: relative;
         font-size: 50px;
         font-family: 'Cinzel', serif;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: center;
+        @include flex(flex, row, wrap, center, center);
         padding: 100px 0px;
-    }
-    
-    .aside-contenedor{
-        position: absolute;
-        background-color: rgb(244, 236, 196);
-        padding: 20px 0px 0px 20px;
-        transform: translate(-20px, -100px);
-
-        ul{
-            padding: 0px;
-            display: flex;
-            flex-direction: row;
-            list-style-type: none;
-
-            li{
-                padding-left: 20px;
-
-                img{
-                    width: 30px;
-                    height: 30px;
-                }
-            }
-
-            li:hover ul{
-                display: block;
-            }
-
-            ul{
-                display: none;
-                position: relative;
-
-                li{
-                    display: block;
-                    background-color: #ecce48;
-                    width: 100px;
-                    padding: 0px;
-                }
-            }
-        }
     }
 
     .articulos{
@@ -63,7 +23,7 @@
         div{
 
             p, h5{
-                color: rgb(244, 222, 123);
+                color: $color-terciario;
             }
 
             p{
@@ -81,42 +41,39 @@
                 width: auto;
 
                 .articulos-div{
-                    background-color: rgb(14, 6, 28);
-                    height: 490px;
-                    width: 100%;
+                    background-color: $color-productos;
+                    @include width-height (100%, 490px);
                     max-width: 350px;
                     min-width: 350px;
                     font-family: 'Raleway', sans-serif;
-                    font-weight: 500;
+                    font-weight: $weight*5;
                     margin: 0px 50px 50px;
                     border-radius: 10px;
 
                     img{
-                        height: 300px;
-                        width: 100%;
+                        @include width-height (100%, 300px);
                         max-width: 350px;
                         min-width: 350px;
                         border-style: outset;
                         border-radius: 10px;
-                        border-color: #d9b100;
+                        border-color: $color-primario;
                     }
                 }
 
                 .articulos-div:hover{
                     transform: scale(1.1);
                     transition-duration: 1s;
-                    box-shadow: 5px 5px 10px black;
+                    box-shadow: 5px 5px 10px $color-secundario;
                 }
             }
 
             button{
                 font-size: 15px;
-                height: 30px;
-                width: 85px;
+                @include width-height (85px, 30px);
                 margin: 5px;
-                border: 2px solid #d9b100;
+                border: 2px solid $color-terciario;
                 border-radius: 5px;
-                background-color: rgb(228, 225, 41);
+                background-color: $color-primario;
             }
         }
     }

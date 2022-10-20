@@ -24,92 +24,79 @@ footer {
         display: flex;
         flex-wrap: wrap;
 
-        h4{
-            font-size: 25px;
-            font-family:'Comfortaa', cursive;
-            font-weight:600;
-            margin: 50px 0px 25px 20px;
-        }
-    
-        div ul li{
-            font-size: 10px;
-            font-family:'Comfortaa', cursive;
-            font-weight: 600;
-            line-height: 30px;
-            list-style: none;
-            color: grey;
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            margin: 25px;
-            align-items: center;
-    
-            a{
+            h4{
+                font-size: 25px;
+                font-family:'Comfortaa', cursive;
+                font-weight: $weight*6;
+                margin: 50px 0px 25px 20px;
+            }
+        
+            div ul li{
+                font-size: 14px;
+                font-family:'Comfortaa', cursive;
+                font-weight: $weight*6;
+                line-height: 30px;
+                list-style: none;
                 color: grey;
-                text-decoration: none;
-            }
-    
-            .contenedor_wpp{
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-    
-                img{
-                    height: 20px;
-                    width: 20px;
+                @include flex(flex, column, wrap, space-around, center);
+                margin: 25px;
+        
+                a{
+                    color: grey;
+                    text-decoration: none;
                 }
-            }
-    
-            .contenedor_email{
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-    
-                img{
-                    height: 20px;
-                    width: 20px;
+        
+                .contenedor_wpp{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+        
+                    img{
+                        @include width-height (25px, 25px);
+                    }
                 }
-            }
+        
+                .contenedor_email{
+                    @extend .contenedor_wpp;
     
-            .contenedor_ubicacion{
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-    
-                img{
-                    height: 20px;
-                    width: 20px;
+                    img{
+                        @include width-height (25px, 25px);
+                    }
+                }
+        
+                .contenedor_ubicacion{
+                    @extend .contenedor_wpp;
+        
+                    img{
+                        @include width-height (25px, 25px);
+                    }
                 }
             }
         }
-    }
 
-    .contenedor_mapa{
-        padding: 50px 0px;
-        display: flex;
-        height: 300px;
-        width: 300px;
-    }
-
-    .footer_redes{
-
-        .contenedor_instagram{
-
-            img{  
-                height: 40px;
-                width: 40px;
+        .contenedor_mapa{
+            padding: 50px 0px;
+            display: flex;
+            justify-content: end;
+            @include width-height (380px, 350px);
+        }
+    
+        .footer_redes{
+    
+            .contenedor_instagram{
+    
+                img{  
+                    @include width-height (40px, 40px);
+                }
+            }
+    
+            .contenedor_facebook{
+    
+                img{
+                    @include width-height (40px, 40px);
+                }
             }
         }
-
-        .contenedor_facebook{
-
-            img{
-                height: 40px;
-                width: 40px;
-            }
-        }
-    }
 
     .row{
         align-items: center;
@@ -123,12 +110,8 @@ footer {
     }
 
     .copyright{
-        background-color: gold;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;    
-        justify-content: center;
-        align-items:flex-end;
+        background-color: $color-primario;
+        @include flex(flex, row, wrap, center, flex-end);
     }
 }
 

@@ -1,9 +1,9 @@
 /* MAIN (talles) */
 
 .main-talles{
-    color: #ffd700;
+    color: $color-primario;
     padding: 100px 0px;
-    background-color: #000000;
+    background-color: $color-secundario;
     grid-area: main2;
 
     h3{
@@ -14,21 +14,14 @@
     .main-talles_buzos{
         font-size: 20px;
         padding: 50px;
-        color:#ffd700;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        align-items: center;
+        color: $color-primario;
+        @include flex(flex, column, wrap, center, center);
         animation-name: entrada-lateral-izquierda;
         animation-duration: 2s;
         animation-iteration-count: 1;
         animation-timing-function: ease-in-out;
 
-        table thead tr th{
-            padding: 20px 100px;
-        }
-
-        table tbody tr td{
+        table thead tr th, table tbody tr td{
             padding: 20px 100px;
         }
     }
@@ -46,21 +39,14 @@
     .main-talles_remeras{
         font-size: 20px;
         padding: 50px;
-        color:#ffd700;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        align-items: center;
+        color:$color-primario;
+        @include flex(flex, column, wrap, center, center);
         animation-name: entrada-lateral-derecha;
         animation-duration: 3s;
         animation-iteration-count: 1;
         animation-timing-function: ease-in-out;
 
-        table thead tr th{
-            padding: 20px 100px;
-        }
-
-        table tbody tr td{
+        table thead tr th, table tbody tr td{
             padding: 20px 100px;
         }
     }

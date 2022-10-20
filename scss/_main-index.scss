@@ -5,18 +5,14 @@
     background-image: url(../images/header/fondo-main.jpg);
     background-repeat: no repeat;
     background-size: cover;
-    height: 100%;
-    width: 100%;
+    @include width-height (100%, 100%);
     grid-area: main1;
 
     .novedades-h3{
         padding-bottom: 100px;
         font-size: 50px;
         font-family: 'Cinzel', serif;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
+        @include flex(flex, row, wrap, center, center);
     }
 
     .novedades{
@@ -25,18 +21,17 @@
         align-items: center;
 
         div img{
-            height: 300px;
-            width: 250px;
+            @include width-height (250px, 300px);
             border-radius: 20px;
-            border-color: #d9b100;
+            border-color: $color-primario;
             border-style: outset;
-            box-shadow: 5px 5px 10px black;
+            box-shadow: 5px 5px 10px $color-secundario;
         }
 
         div img:hover{
             transform: scale(1.1);
             transition-duration: 1s;
-            box-shadow: 5px 5px 10px black;
+            box-shadow: 5px 5px 10px $color-secundario;
         }
     }
 
@@ -44,10 +39,7 @@
         padding:100px 0px;
         font-size: 50px;
         font-family: 'Cinzel', serif;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
+        @include flex(flex, row, wrap, center, center); 
     }
 
     .destacados{
@@ -56,30 +48,26 @@
         align-items: center;
 
         div img{
-            height: 300px;
-            width: 250px;
+            @include width-height (250px, 300px);
             border-radius: 20px;
             border-style: outset;
-            border-color: #d9b100;
-            box-shadow: 5px 5px 10px black;
+            border-color: $color-primario;
+            box-shadow: 5px 5px 10px $color-secundario;
         }
 
         div img:hover{
             transform: scale(1.1);
             transition-duration: 1s;
-            box-shadow: 5px 5px 10px black;
+            box-shadow: 5px 5px 10px $color-secundario;
         }
     }
 
     .masinfo{
         font-size: 25px;
-        font-weight: 100;
+        font-weight: $weight;
         font-style: normal;
         font-family: 'Comfortaa', cursive;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: space-around;
+        @include flex(flex, row, wrap, space-around, center);
 
         .masinfo_articulos{
             padding: 150px 0px;
@@ -89,14 +77,12 @@
             justify-content: center;
 
             img{
-                width: 70px;
-                height: 70px;
+                @include width-height (70px, 70px);
                 margin: 70px;
             }
 
             .medios-de-pago img{
-                width: 40px;
-                height: 25px;
+                @include width-height (40px, 25px);
                 margin: 0px;
             }
 

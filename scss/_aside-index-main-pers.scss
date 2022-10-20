@@ -8,17 +8,21 @@
     grid-area: main3;
 }
 
-.aside_index, .main-personalizadas{
-    background-color: #000000;
+.aside_index{
+    background-color: $color-secundario;
     padding: 100px 0px;
     display: flex;
     flex-direction: column;
 }
 
-.aside_index h3, .main-personalizadas h3{
+.main-personalizadas{
+    @extend .aside_index;
+}
+
+.aside_index_h3{
     font-size: 50px;
     font-family: 'Cinzel', serif;
-    color: white;
+    color: #ffffff;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -26,12 +30,17 @@
     text-align: center;
 }
 
-.aside_index form, .main-personalizadas form{
+.main-personalizadas_h3{
+    @extend .aside_index_h3;
+}
+
+.aside_index_form{
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flex(flex, column, wrap, center, center)
+}
+
+.main-personalizadas_form{
+    @extend .aside_index_form;
 }
 
 .main-personalizadas{
@@ -53,13 +62,12 @@
 }
 
 .aside_index form label, .main-personalizadas form label{
-    color: white;
+    color: #ffffff;
     margin-top: 30px;
 }
 
 .aside_index form input, .main-personalizadas form input{
-    height: 30px;
-    width: 300px;
+    @include width-height (300px, 30px);
     border-radius: 5px;
     margin-top: 20px;
 }

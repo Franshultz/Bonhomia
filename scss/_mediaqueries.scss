@@ -1,4 +1,4 @@
-
+// Media Queries
 
 @media (max-width: 768px) {
 
@@ -121,5 +121,9 @@
         flex-direction: column; 
         justify-content: center;
         align-content: center;
+
+        .contenedor_mapa{
+            padding-right: 35px;
+        }
     }
 } 
