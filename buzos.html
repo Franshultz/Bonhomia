@@ -31,7 +31,7 @@
     </head>
 
 <body>
-    <nav class="nav-contenedor">
+    <nav>
         <div class="mensaje-rapido">
             <p>3 cuotas sin interes, envío gratis gratis a todo el pais en compras de mas de $10.000</p>
         </div>
@@ -41,8 +41,12 @@
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
-            <a href="#" class="contenedor_micuenta">
+            <a href="#" class="contenedor_micuenta" id="mi_cuenta">
                 <img src="images/iconos/micuenta.png" alt="Mi cuenta">
+                <div class="contenedor_micuenta_opciones">
+                    <h5>Crear cuenta</h5>
+                    <h5>Iniciar sesion</h5>
+                </div>
             </a>
             <a href="#" class="contenedor_carrito">
                 <img src="images/iconos/carrito.png" alt="Carrito de compras">
@@ -115,9 +119,10 @@
 
     <main class="main-productos">
         <h3 class="main-titulo">BUZOS</h3>
-        <section class="articulos">
-            <div class="row row-cols-1 row-cols-md-2 g-4 d-flex justify-content-center" id="productos" id="buzo-productos">
-                <div class="col articulos-bs">
+        <button id="boton">click aqui</button>
+        <section class="articulos" id="items-contenedor">
+            <div class="row row-cols-1 row-cols-md-2 g-4 d-flex justify-content-center" id="items">
+                <!-- <div class="col articulos-bs">
                     <div class="card articulos-div">
                         <div class="card-body d-flex align-items-center d-flex flex-column">
                             <img src="images/buzos/buzo1.jpg" alt="buzo1">
@@ -128,7 +133,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col articulos-bs" id="buzo2">
+                <div class="col articulos-bs">
                     <div class="card articulos-div">
                         <div class="card-body d-flex align-items-center d-flex flex-column">
                             <img src="images/buzos/buzo2.jpg" alt="buzo2">
@@ -182,7 +187,7 @@
                             <button>AGREGAR</button>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </section>
     </main>
@@ -236,7 +241,7 @@
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
         crossorigin="anonymous">
     </script>
-    <script src="javascript/index.js"></script>
+    <script src="javascript/buzos.js"></script>
 </body>
 
 </html>
