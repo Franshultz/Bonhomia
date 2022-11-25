@@ -23,15 +23,15 @@
         div{
 
             p, h5{
-                color: $color-terciario;
+                color: $color-secundario    ;
             }
 
             p{
-                font-size: 16px;
+                font-size: 15px;
             }
 
             h5{
-                font-size: 25px;
+                font-size: 24px;
             }
 
             .articulos-bs{
@@ -41,22 +41,17 @@
                 width: auto;
 
                 .articulos-div{
-                    background-color: $color-productos;
-                    @include width-height (100%, 490px);
-                    max-width: 350px;
-                    min-width: 350px;
+                    background-color: $color-terciario;
+                    @include width-height (250px, 400px);
+                    max-width: 250px;
                     font-family: 'Raleway', sans-serif;
                     font-weight: $weight*5;
-                    margin: 0px 50px 50px;
-                    border-radius: 10px;
+                    margin: 0px 50px 50px;  
+                    border-radius: 8px;
 
                     img{
-                        @include width-height (100%, 300px);
-                        max-width: 350px;
-                        min-width: 350px;
-                        border-style: outset;
-                        border-radius: 10px;
-                        border-color: $color-primario;
+                        @include width-height (250px, 230px);
+                        border-radius: 8px;    
                     }
                 }
 
