@@ -8656,6 +8656,8 @@ header a {
   padding: 100px 0px;
   display: flex;
   flex-direction: column; }
+  .aside_index .aside_index_form textarea, .main-personalizadas .aside_index_form textarea, .aside_index .main-personalizadas_form textarea, .main-personalizadas .main-personalizadas_form textarea {
+    margin: 20px; }
 
 .aside_index_h3, .main-personalizadas_h3 {
   font-size: 50px;
@@ -8677,7 +8679,8 @@ header a {
 
 .main-personalizadas form {
   animation-name: entrada-lateral-derecha;
-  animation-duration: 3s; }
+  animation-duration: 3s;
+  margin: 0px; }
 
 @keyframes entrada-lateral-derecha {
   0% {
@@ -8751,6 +8754,9 @@ header a {
     border: 2px solid #f4de7b;
     border-radius: 5px;
     background-color: #ffd700; }
+
+.filtro {
+  display: none; }
 
 /* MAIN (talles) */
 .main-talles {

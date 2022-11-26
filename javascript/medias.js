@@ -14,7 +14,7 @@ let creadorDeArticulos = (articulo) => {
         let contenedor = document.createElement("div")
         contenedor.className = "col articulos-bs"
         contenedor.innerHTML = `
-    <div class="card articulos-div" id="producto">
+    <div class="card articulos-div articulo" id="producto">
     <div class="card-body d-flex align-items-center d-flex flex-column">
     <img src="${i.img}" alt="${i.categoria}${i}">
     <p class="card-text">${i.nombre}</p>
@@ -29,3 +29,16 @@ let creadorDeArticulos = (articulo) => {
 }
 
 creadorDeArticulos(mediasProductos);
+
+
+
+
+document.addEventListener("keyup", e => {
+    if (e.target.matches("#buscador")) {
+        document.querySelectorAll(".articulo").forEach(i => {
+            i.textContent.toLowerCase().includes(e.target.value.toLowerCase())
+                ? i.classList.remove("filtro")
+                : i.classList.add("filtro")
+        })
+    }
+})

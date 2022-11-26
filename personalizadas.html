@@ -31,7 +31,7 @@
     </head>
 
 <body class="body_personalizadas">
-    <nav>
+    <nav class="nav-personalizadas">
         <div class="mensaje-rapido">
             <p>3 cuotas sin interes, envío gratis gratis a todo el pais en compras de mas de $10.000</p>
         </div>
@@ -122,15 +122,11 @@
         <p style="color: white; padding: 80px; text-align: center;">Podes enviar tu consulta por mail a: (mail de la
             pagina) con la idea de la remera o consulta que tengas, luego te enviaremos en respuesta una imagen de
             muestra de como quedaría tu remera, sin compromiso de compra y sin presupuesto.</p>
-        <form class="main-personalizadas_form">
-            <label for="">Nombre</label>-
-            <input type="text" value="Nombre">
-            <label for="">Email</label>
-            <input type="email" value="Email">
-            <label for="">Telefono</label>
-            <input type="text" value="Numero">
-            <label for="text">Mensaje</label>
-            <textarea name="" id="" cols="30" rows="10">Mensaje</textarea>
+        <form class="main-personalizadas_form" id="formulario-aside">
+            <input type="text" placeholder="Nombre">
+            <input type="email" placeholder="Email">
+            <input type="text" placeholder="Numero">
+            <textarea name="" id="" cols="30" rows="10"></textarea>
             <input type="submit" value="Enviar">
         </form>
     </main>
@@ -182,7 +178,9 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous">
+    </script>
+    <script src="./javascript/forms-personalizadas.js"></script>
 </body>
 
 </html>
