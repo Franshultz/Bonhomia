@@ -18,6 +18,18 @@
         padding: 100px 0px;
     }
 
+    ul{
+        list-style: none;
+        }
+    }
+
+
+        .contenedor-filtro{
+            display: block;
+        }
+
+
+    
     .articulos{
 
         div{
@@ -72,7 +84,7 @@
             }
         }
     }
-}
+
 
 .filtro{
     display: none;

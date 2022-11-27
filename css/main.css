@@ -8718,42 +8718,52 @@ header a {
     justify-content: center;
     align-items: center;
     padding: 100px 0px; }
-  .main-productos .articulos div p, .main-productos .articulos div h5, .main-productos .articulos div .h5 {
-    color: #000000; }
-  .main-productos .articulos div p {
-    font-size: 15px; }
-  .main-productos .articulos div h5, .main-productos .articulos div .h5 {
-    font-size: 24px; }
-  .main-productos .articulos div .articulos-bs {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: auto; }
-    .main-productos .articulos div .articulos-bs .articulos-div {
-      background-color: #f4de7b;
+  .main-productos ul {
+    list-style: none; }
+
+.contenedor-filtro {
+  display: block; }
+
+.articulos div p, .articulos div h5, .articulos div .h5 {
+  color: #000000; }
+
+.articulos div p {
+  font-size: 15px; }
+
+.articulos div h5, .articulos div .h5 {
+  font-size: 24px; }
+
+.articulos div .articulos-bs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto; }
+  .articulos div .articulos-bs .articulos-div {
+    background-color: #f4de7b;
+    width: 250px;
+    height: 400px;
+    max-width: 250px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    margin: 0px 50px 50px;
+    border-radius: 8px; }
+    .articulos div .articulos-bs .articulos-div img {
       width: 250px;
-      height: 400px;
-      max-width: 250px;
-      font-family: 'Raleway', sans-serif;
-      font-weight: 500;
-      margin: 0px 50px 50px;
+      height: 230px;
       border-radius: 8px; }
-      .main-productos .articulos div .articulos-bs .articulos-div img {
-        width: 250px;
-        height: 230px;
-        border-radius: 8px; }
-    .main-productos .articulos div .articulos-bs .articulos-div:hover {
-      transform: scale(1.1);
-      transition-duration: 1s;
-      box-shadow: 5px 5px 10px #000000; }
-  .main-productos .articulos div button {
-    font-size: 15px;
-    width: 85px;
-    height: 30px;
-    margin: 5px;
-    border: 2px solid #f4de7b;
-    border-radius: 5px;
-    background-color: #ffd700; }
+  .articulos div .articulos-bs .articulos-div:hover {
+    transform: scale(1.1);
+    transition-duration: 1s;
+    box-shadow: 5px 5px 10px #000000; }
+
+.articulos div button {
+  font-size: 15px;
+  width: 85px;
+  height: 30px;
+  margin: 5px;
+  border: 2px solid #f4de7b;
+  border-radius: 5px;
+  background-color: #ffd700; }
 
 .filtro {
   display: none; }
