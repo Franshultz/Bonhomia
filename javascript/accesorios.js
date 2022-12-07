@@ -21,7 +21,7 @@ let creadorDeArticulos = (articulo) => {
     <p class="card-text">${i.nombre}</p>
     <h5 class="card-title">$${i.precio}</h5>
     <p>3 cuotas sin interes</p>
-    <button id="boton${i.id}">AGREGAR</button>
+    <button class="btn1" id="boton${i.id}">AGREGAR</button>
     </div>
     </div>
     `;
@@ -74,7 +74,7 @@ boton.addEventListener("click", () => {
     <p class="card-text">${i.nombre}</p>
     <h5 class="card-title">$${i.precio}</h5>
     <p>3 cuotas sin interes</p>
-    <button id="boton${i.id}">AGREGAR</button>
+    <button class="btn1" id="boton${i.id}">AGREGAR</button>
     </div>
     </div>
     </div>
@@ -88,7 +88,100 @@ boton.addEventListener("click", () => {
 
 // CARRITO
 
+const btnCart = document.querySelector('.container-icon')
+const containerCartProducts = document.querySelector('.container-cart-products')
+
+btnCart.addEventListener('click', () => {
+    containerCartProducts.classList.toggle('hidden-cart')
+})
+
+
 let carrito = [];
+const valorTotal = document.querySelector('.total-pagar')
+const countProducts = document.querySelector('#contador-productos')
+const rowProduct = document.querySelector('.row-product');
+
+
+
+const productsList = document.getElementById("items")
+productsList.addEventListener('click', e => {
+    if(e.target.classList.contains('btn1')){
+        const product = e.target.parentElement
+        const infoProduct = {
+            quantity: 1,
+            title: product.querySelector('p').innerText,
+            price: product.querySelector('h5').innerText
+        };
+    const productoExistente = carrito.some(product => product.title === infoProduct.title);
+    if(productoExistente){
+        const products = carrito.map(i => {
+            if(i.title === infoProduct.title){
+                i.quantity++;
+                return i
+            }else{
+                return i
+            }     
+        })
+        carrito = [...products]
+    }else{
+        carrito = [...carrito, infoProduct];
+    }
+    carritoHTML();
+    }
+});
+
+rowProduct.addEventListener('click', (e) =>{
+    if(e.target.classList.contains('icon-close')){
+        const product = e.target.parentElement
+        const title = product.querySelector('p').textContent;
+        carrito = carrito.filter(i => i.title !== title);
+        carritoHTML()
+    }
+});
+
+const carritoHTML = () => {
+    rowProduct.innerHTML = '';
+    let total = 0;
+    let totalOfPrducts = 0;
+    carrito.forEach(i =>{
+        const contentProducto = document.createElement('div')
+        contentProducto.classList.add('cart-product')
+        contentProducto.innerHTML = `
+        <div class="info-cart-product">
+        <span class="cantidad-producto-carrito">${i.quantity}</span>
+        <p class="titulo-producto-carrito">${i.title}</p>
+        <span class="precio-producto-carrito">${i.price}</span>
+        </div>
+        <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="icon-close"
+        >
+        <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M6 18L18 6M6 6l12 12"
+        />
+        </svg>
+        `
+        rowProduct.append(contentProducto)
+        total = total + parseInt(i.quantity * i.price.slice(1));
+        totalOfPrducts = totalOfPrducts + i.quantity;
+    })
+    valorTotal.innerText = `$${total}`;
+    countProducts.innerText = totalOfPrducts;
+}
+
+
+
+
+
+// CARRITO STORAGE
+
+let carritoStorageVacio = [];
 
 const agregar = (id) => {
     let carritoStorage = JSON.parse(localStorage.getItem("carrito"));
@@ -98,8 +191,8 @@ const agregar = (id) => {
         nuevoCarrito.push(objeto);
         localStorage.setItem("carrito", JSON.stringify(nuevoCarrito));
     } else {
-        let carrito = [objeto];
-        localStorage.setItem("carrito", JSON.stringify(carrito));
+        let carritoStorageVacio = [objeto];
+        localStorage.setItem("carrito", JSON.stringify(carritoStorageVacio));
     }
 };
 
