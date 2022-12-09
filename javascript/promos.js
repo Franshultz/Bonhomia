@@ -11,9 +11,9 @@ let listado = document.getElementById("items");
 // })
 
 
+// https://my-json-server.typicode.com/Franshultz/DatosJSON/db.json
 
-
-fetch("https://my-json-server.typicode.com/Franshultz/DatosJSON/db.json") 
+fetch("../data-promos.json")     
 .then(response => response.json())
 .then(data => {
         data.forEach(producto => {
