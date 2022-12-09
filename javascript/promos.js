@@ -1,17 +1,6 @@
+// ITERO MIS PRODUCTOS DESDE EL .JSON Y LOS RENDERIZO
+
 let listado = document.getElementById("items");
-// fetch('https://jsonplaceholder.typicode.com/posts')
-// .then(response => response.json())
-// .then(data => {
-//     data.forEach(publicacion => {
-//         let contenedor = document.createElement("div");
-//         contenedor.innerHTML = `
-        
-//         `
-//     });
-// })
-
-
-// https://my-json-server.typicode.com/Franshultz/DatosJSON/db.json
 
 fetch("../data-promos.json")     
 .then(response => response.json())
@@ -22,7 +11,7 @@ fetch("../data-promos.json")
                 contenedor.innerHTML = `
             <div class="card articulos-div articulo" id="producto">
             <div class="card-body d-flex align-items-center d-flex flex-column">
-            <img src="${producto.img}" alt="${producto.categoria}${i}">
+            <img src="${producto.img}" alt="${producto.categoria}${producto}">
     <p class="card-text">${producto.promocion}</p>
     <h5 class="card-title">$${producto.precio}</h5>
     <p>3 cuotas sin interes</p>
@@ -33,11 +22,3 @@ fetch("../data-promos.json")
         listado.append(contenedor);
     });
 })
-
-
-// fetch('https://jsonplaceholder.typicode.com/posts')
-//   .then((response) => response.json())
-//   .then((data) => {
-//     console.log(data[0].title);
-//     console.log(data[0].body);
-//   });  
