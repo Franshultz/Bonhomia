@@ -8,6 +8,11 @@ formularioDudas.addEventListener("submit", (e) => {
     localStorage.setItem("email", (info[1].value));
     localStorage.setItem("numero", (info[2].value));
     localStorage.setItem("mensaje", (info[3].value));
+    Swal.fire(
+        'Bien Hecho!',
+        'Su consulta ha sido enviada con exito',
+        'success'
+    )
 });
 
 

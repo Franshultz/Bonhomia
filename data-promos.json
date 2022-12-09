@@ -1,0 +1,5 @@
+[
+    {"id": 1, "categoria": "remeras", "promocion": "50%DTO en Remeras Negras", "img": "images/promociones/promo1.jpg", "precio": 1000},
+    {"id": 2, "categoria": "remeras", "promocion": "Remeras diseño compartido", "img": "images/promociones/promo2.jpg", "precio": 1400},
+    {"id": 3, "categoria": "buzos", "promocion": "4x3 en buzos", "img": "images/promociones/promo3.jpg", "precio": 2500}
+]

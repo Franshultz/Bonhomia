@@ -52,7 +52,6 @@ document.addEventListener("keyup", e => {
 // Creo un filtro para precio maximo
 let boton = document.getElementById("boton-filtro")
 boton.addEventListener("click", () => {
-
     const filtro = document.getElementById("filtroxd");
     filtro.addEventListener("submit", (e) => {
         e.preventDefault();
