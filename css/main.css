@@ -9005,9 +9005,13 @@ footer {
     nav .contenedor_micuenta img {
       width: 30px;
       height: 30px; }
+    nav .contenedor_h1 {
+      font-size: 25px; }
     nav .contenedor_carrito img {
       width: 30px;
       height: 30px; }
+    nav .d-flex {
+      width: 250px; }
     nav .menu {
       display: none;
       position: absolute;
