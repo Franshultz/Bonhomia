@@ -4,9 +4,6 @@
     grid-area: aside1;
 }
 
-.main-personalizadas{
-    grid-area: main3;
-}
 
 .aside_index{
     background-color: $color-secundario;
@@ -23,14 +20,11 @@
     }
 }
 
-.main-personalizadas{
-    @extend .aside_index;
-}
 
 .aside_index_h3{
-    font-size: 50px;
+    font-size: 4em;
     font-family: 'Cinzel', serif;
-    color: #ffffff;
+    color: $color-primario;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -38,8 +32,22 @@
     text-align: center;
 }
 
+.main-personalizadas_div{
+    margin: auto;
+    width: 70%;
+}
+
 .main-personalizadas_h3{
     @extend .aside_index_h3;
+    margin-bottom: 1em;
+}
+
+.main-personalizadas_p{
+    text-align: justify;
+    font-size: 1.2em;
+    color: $color-primario;
+    padding: 0em 10em;
+    margin-bottom: 4em;
 }
 
 .aside_index_form{
@@ -49,15 +57,87 @@
 
 .main-personalizadas_form{
     @extend .aside_index_form;
+    background-color: rgb(0, 0, 0);
+    border-radius: 1em;
+    padding: 5em 0em;
 }
 
-.main-personalizadas{
+.main-personalizadas_form div{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
 
-    form{
-        animation-name: entrada-lateral-derecha;
-        animation-duration: 3s;
-        margin: 0px;
-    }
+.main-personalizadas_form label{
+    font-size: 1em;
+    margin-bottom: 0.1em;
+    transform: translateX(-0.3em);
+    font-weight: 600;
+    color: $color-primario;
+}
+
+.main-personalizadas_form input{
+    color: rgb(242, 237, 186);
+    background-color: rgb(27, 26, 22);
+    font-size: 0.9em;
+    font-weight: 500;
+    padding: 0.5em;
+    margin-bottom: 1.5em;
+    width: 100%;
+    border: none;
+    border-radius: 0.4em;
+    transition: background-color 0.5s ease, transform 0.5s ease, border 0.5s ease;
+}
+
+.main-personalizadas_form input:hover{
+    transform: scale(1.03);
+}
+
+.main-personalizadas_form input:focus{ 
+    color: $color-secundario;
+    background-color: rgb(242, 237, 186);
+    outline: none; 
+    border: rgb(248, 240, 124) solid 0.2em;
+}
+
+.main-personalizadas_form textarea{
+    background-color: rgb(27, 26, 22);
+    color: rgb(242, 237, 186);
+    width: 100%;
+    height: 6em;
+    margin-bottom: 1em;
+    border: none;
+    border-radius: 0.4em;
+    padding: 0.5em;
+    transition: background-color 0.5s ease, transform 0.5s ease, border 0.5s ease;
+}
+
+.main-personalizadas_form textarea:hover{
+    transform: scale(1.03);
+}
+
+.main-personalizadas_form textarea:focus{ 
+    color: $color-secundario;
+    background-color: rgb(255, 248, 175);
+    outline: none; 
+    border: rgb(248, 240, 124) solid 0.2em;
+}
+
+.main-personalizadas_form input[type=submit]{
+    color: black;
+    border-radius: 1.2em;
+    font-weight: bold;
+    font-size: 1em;
+    width: 100%;
+    background-color: rgb(255, 248, 175);
+}
+
+.main-personalizadas_form input[type=submit]:hover{
+    background-color: rgb(253, 242, 113);
+}
+
+
+main {
 
     @keyframes entrada-lateral-derecha{
         0%{
@@ -68,15 +148,4 @@
             transform: translateX(0px);
         }
     }
-}
-
-.aside_index form label, .main-personalizadas form label{
-    color: #ffffff;
-    margin-top: 30px;
-}
-
-.aside_index form input, .main-personalizadas form input{
-    @include width-height (300px, 30px);
-    border-radius: 5px;
-    margin-top: 20px;
 }

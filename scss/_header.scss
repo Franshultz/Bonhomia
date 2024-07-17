@@ -15,10 +15,11 @@
 }
 
 header{
-
+    display: grid;
+    grid-area: header;
     a{
         text-decoration: none;
-
+        
         h2{
             height: 350px;
             padding: 100px 0px;
@@ -34,9 +35,8 @@ header{
             margin-bottom: 0px;
             @include flex(flex, row, wrap, center, center);
             text-align: center;
-            grid-area: header;
         }
-
+        
         h2:hover{
             transform: scale(1.1);
             transition: 1s;

@@ -1,21 +1,21 @@
-<footer class="container">
+<footer>
         <div class="footer-content row">
             <div class="col-sm-12 col-md-4">
                 <h4>Contactanos</h4>
                 <ul>
                     <li>
-                        <a href="" class="contenedor_wpp"><img src="images/iconos/wpp.png" alt="icono wpp">
+                        <a href="" class="contenedor_wpp"><img src="../images/iconos/wpp.png" alt="icono wpp">
                             <p>+5411 2577-4465</p>
                         </a>
                     </li>
                     <li>
-                        <a href="" class="contenedor_email"><img src="images/iconos/email.png" alt="icono email">
+                        <a href="" class="contenedor_email"><img src="../images/iconos/email.png" alt="icono email">
                             <p>info@bohnomíadesign.com</p>
                         </a>
                     </li>
                     <li>
                         <a href="" class="contenedor_ubicacion">
-                            <img src="images/iconos/ubicacion.png" alt="icono ubicacion">
+                            <img src="../images/iconos/ubicacion.png" alt="icono ubicacion">
                             <p>Almagro, Capital Federal</p>
                         </a>
                     </li>
@@ -31,11 +31,11 @@
                 <h4>Redes sociales</h4>
                 <ul>
                     <li>
-                        <a href="" class="contenedor_instagram"><img src="images/iconos/instagram.png"
+                        <a href="" class="contenedor_instagram"><img src="../images/iconos/instagram.png"
                                 alt="icono instagram"></a>
                     </li>
                     <li>
-                        <a href="" class="contenedor_instagram"><img src="images/iconos/facebook.png"
+                        <a href="" class="contenedor_instagram"><img src="../images/iconos/facebook.png"
                                 alt="icono facebook"></a>
                     </li>
                 </ul>

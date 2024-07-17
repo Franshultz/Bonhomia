@@ -1,12 +1,12 @@
 /* MAIN (index) */
 
-.main-index{
+main{
     padding: 100px 0px;
     background-image: url(../images/header/fondo-main.jpg);
     background-repeat: no repeat;
     background-size: cover;
     @include width-height (100%, 100%);
-    grid-area: main1;
+    grid-area: main;
 
     .novedades-h3{
         padding-bottom: 100px;
