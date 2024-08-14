@@ -20,3 +20,10 @@ body {
     "footer3";
 }
 
+.main-productos {
+  max-width: 100%;
+  display: grid;
+  grid-template-areas:
+    "filtros articulos";
+}
+

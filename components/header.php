@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- Icono -->
     <link rel="icon" href="images/iconos/icono.png">
 
@@ -28,20 +28,57 @@
 
     <!-- Titulo -->
     <title>Bonhomía Design</title>
-    
+
 </head>
 
 <body>
-    <header>
+    <?php include_once("../database/database.php"); ?>
+    <header class="header-all">
         <div class="mensaje-rapido">
-            <p>3 cuotas sin interes, envío gratis gratis a todo el pais en compras de mas de $10.000</p>
+            <div class="contenedor-mensaje">
+                <p>¡Envío gratis en pedidos superiores a $80,000! | Descuento del 20% en todos los productos este fin de semana | ¡Ofertas limitadas, no te quedes fuera!</p>
+            </div>
         </div>
         <div class="contenedor1">
             <h1 class="contenedor_h1">Bonhomía</h1>
-            <form class="d-flex contenedor_buscador role=" search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+            <nav>
+                <ul class="nav-links">
+                    <input type="checkbox" id="checkbox_toggle" />
+                    <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+                    <div class="menu">
+                        <li>
+                            <a href="index.php">INICIO</a>
+                        </li>
+                        <?php
+                        if ($conection != NULL) {
+                            $query = "SELECT * FROM categorias";
+                            $feedback = mysqli_query($conection, $query);
+
+                            if ($feedback != NULL) {
+                                while ($filas = mysqli_fetch_array($feedback)) {
+                                    echo "<li>";
+                                    echo "<a href=categorias.php?categoria=$filas[id] >$filas[nombre]</a>";
+                                    echo "</li>";
+                                }
+                            } else {
+                                echo "<span>Los datos no han sido cargados correctamente</span>";
+                            }
+                        } else {
+                            echo "<span>Debe conectarse correctamente a la base de datos</span>";
+                        }
+                        ?>
+                        <li>
+                            <a href="contacto.php">CONTACTO</a>
+                        </li>
+                        <li>
+                            <a href="talles.php">TALLES</a>
+                        </li>
+                        <li>
+                            <a href="promos.php">PROMOS</a>
+                        </li>
+                    </div>
+                </ul>
+            </nav>
             <a href="#" class="contenedor_micuenta" id="mi_cuenta">
                 <img src="../images/iconos/micuenta.png" alt="Mi cuenta">
                 <div class="contenedor_micuenta_opciones">
@@ -72,63 +109,5 @@
                 </div>
             </div>
         </div>
-        <nav>
-            <ul class="nav-links">
-                <input type="checkbox" id="checkbox_toggle" />
-                <label for="checkbox_toggle" class="hamburger">&#9776;</label>
-                <div class="menu">
-                    <li>
-                        <a href="index.php">Inicio</a>
-                    </li>
-                    <li>
-                        <a href="buzos.php">Buzos</a>
-                    </li>
-                    <li>
-                        <a href="remeras.php">Remeras</a>
-                    </li>
-                    <li>
-                        <a href="medias.php">Medias</a>
-                    </li>
-                    <li>
-                        <a href="accesorios.php">Accesorios</a>
-                    </li>
-                    <li>
-                        <a href="contacto.php">Contacto</a>
-                    </li>
-                    <li>
-                        <a href="talles.php">Talles</a>
-                    </li>
-                    <li>
-                        <a href="promos.php">Promos</a>
-                    </li>
-                </div>
-            </ul>
-        </nav>
-        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="1500">
-                    <a href="promos.html">
-                        <h2>Descuentos 50%</h2>
-                    </a>
-                </div>
-                <div class="carousel-item" data-bs-interval="1500">
-                    <a href="promos.html">
-                        <h2 class="header-fondo2">Descuentos 50%</h2>
-                    </a>
-                </div>
-                <div class="carousel-item" data-bs-interval="1500">
-                    <a href="promos.html">
-                        <h2 class="header-fondo3">Descuentos 50%</h2>
-                    </a>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
+
     </header>

@@ -25,7 +25,7 @@ if ($countries === NULL) {
 }
 ?>
 
-<main>
+<main class="main-contacto">
     <div class="main-personalizadas_div">
         <form class="main-personalizadas_form" id="formulario">
             <h3 class="main-personalizadas_h3">CONTACTO </h3>

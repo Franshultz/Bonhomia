@@ -1,14 +1,12 @@
 {
-    "liveServer.settings.port": 5501,
     "liveSassCompile.settings.formats": [
-    {
-        "format": "expanded",
-        "extensionName": ".css",
-        "savePath": "/css"
-    }
-],
-"liveSassCompile.settings.includeItems": [
-    "/scss/styles.scss"
-]
+        {
+            "format": "expanded",  // Estilo de formato (puede ser "expanded", "compressed", etc.)
+            "extensionName": ".css",  // Extensión del archivo resultante
+            "savePath": "/css"  // Ruta de destino para los archivos CSS
+        }
+    ],
+    "liveSassCompile.settings.includeItems": [
+        "/scss/**/*.scss"  // Ruta de los archivos Sass que quieres compilar
+    ]
 }
-

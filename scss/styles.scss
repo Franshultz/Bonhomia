@@ -1,4 +1,3 @@
-@import "bootstrap/bootstrap.scss";
 @import "variables";
 @import "grid";
 @import "nav";
@@ -8,7 +7,8 @@
 @import "main-buzos-remeras-etc";
 @import "main-talles";
 @import "footer";
-@import "mediaqueries"; 
+@import "mediaqueries";
+@import "main-contacto.scss"; 
 
 *{
     margin: 0px;

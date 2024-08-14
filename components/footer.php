@@ -41,6 +41,15 @@
                 </ul>
             </div>
         </div>
+        <div class="medios-de-pago">
+                <img src="../images/iconos/visa@2x.png" alt="visa">
+                <img src="../images/iconos/amex@2x.png" alt="amex">
+                <img src="../images/iconos/tarjeta-naranja@2x.png" alt="naranja">
+                <img src="../images/iconos/mastercard@2x.png" alt="mastercard"><br>
+                <img src="../images/iconos/paypal@2x.png" alt="paypal">
+                <img src="../images/iconos/mercadopago@2x.png" alt="mercadopago">
+                <img src="../images/iconos/rapipago@2x.png" alt="rapipago">
+            </div>
         <p class="copyright row">Copyright Bonhomía Design - 2022. Todos los derechos reservados.</p>
     </footer>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>

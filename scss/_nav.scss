@@ -6,39 +6,48 @@ nav{
     position: sticky;
     top: -40px;
     z-index: 100;
-    height: max-content;
+    height: 100%;
 
     /* NAVBAR MENU */
+.nav-links{
+    height: 100%;
+}
 
 .menu {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     list-style: none;
-    gap: .5em;
     margin: 0px;
     font-size: 16px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 100%;
     }
 
     li {
-        padding: 5px 0px;
+        padding: 1em 2em;
+        text-align: center;
+        width: 100%;
+        transition: 0.5s;
+        height: 100%;
+        align-content: center;
         
                 a{
+                    font-size: 0.8em;
+                    height: 100%;
                     text-decoration: none;
+                    font-family: "Montserrat", sans-serif;
+                    font-weight: 400;
                     color: $color-primario;
+                    transition: 0.5s;
                     }
 
                 a:hover {
-                    color: $color-secundario;
+                    color: black;
                     }
                 }
 
     li:hover {
         background-color: #ffff87;
-        border-radius: 5px;
-        padding: 8px;
-        transition: 0.4s;
         }
     
     input[type=checkbox]{
@@ -60,12 +69,34 @@ nav{
     background-color: $color-primario;
     position: relative;
     bottom: 0px;
+    overflow: hidden;
+
+    .contenedor-mensaje{
+        display: inline-block;
+        white-space: nowrap; /* Evita que el texto se divida en líneas */
+        animation: scroll-left 12s linear infinite; /* Aplica la animación */
+
+        p{
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8em;
+            font-weight: 600;
+        }
+    }
+
+    @keyframes scroll-left {
+        0% {
+            transform: translateX(100%); /* Empieza fuera del lado derecho */
+        }
+        100% {
+            transform: translateX(-100%); /* Termina fuera del lado izquierdo */
+        }
+    }
 }
 
 
 .contenedor1{
     background-color: $color-secundario;
-    height: 100px;
+    height: 5em;
     @include flex(flex, row, wrap, space-around, center)
 }
 
@@ -77,7 +108,9 @@ nav{
     font-size: 30px;
     font-family: 'UnifrakturMaguntia', cursive;
     text-align: center;
-    order: 1;
+    order: 0;
+    align-content: center;
+    margin-bottom: 0em;
 }
 
 .contenedor_buscador{
@@ -93,7 +126,7 @@ nav{
         display: none;
     }
     img{
-        @include width-height (50px, 50px);
+        @include width-height (25px, 25px);
     }
 }
 .contenedor_micuenta:hover{
@@ -126,7 +159,7 @@ nav{
     order: 4;
     
     img {
-        @include width-height (50px, 50px);
+        @include width-height (25px, 25px);
     }
 }
 
